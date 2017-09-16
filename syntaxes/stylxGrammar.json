@@ -1,0 +1,46 @@
+{
+  "scopeName": "source.stylx",
+  "name": "Stylx",
+  "fileTypes": [
+    ".js"
+  ],
+  "patterns": [
+    {
+      "begin": "(stylx.get)\\(",
+      "end": "\\)",
+      "captures": {
+        "1": {
+          "name": "storage.type.js"
+        }
+      },
+      "patterns": [
+        { "include": "source.css" },
+        { "include": "#literals" }
+      ]
+    },
+    {
+      "include": "source.js"
+    }
+  ],
+  "repository": {
+    "literals": {
+      "patterns": [
+        {
+          "begin": ".*(\\$\\{)",
+          "end": "(\\})",
+          "captures": {
+            "1": {
+              "name": "storage.type.js"
+            }
+          },
+          "patterns": [
+            {
+              "match": ".*",
+              "include": "source.js"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
