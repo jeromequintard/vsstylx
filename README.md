@@ -1,7 +1,5 @@
 # Stylx
 
-Adds syntax highlighting for Stylx in Visual Studio Code.
+Ajoute le support de Stylx dans Visual Studio Code
 
-### For more information
-
-* [Ikise](https://www.ikise.com)
+La grammaire Textmate pose pour le moment un soucis de priorité avec certaines extensions.
